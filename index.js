@@ -3,9 +3,9 @@ var path = require('path')
 
 var platform = os.platform()
 //patch for compatibilit with electron-builder, for smart built process.
-if(platform == "darwin"){
+if (platform == "darwin") {
 	platform = "mac";
-}else if(platform == "win32"){
+} else if(platform == "win32") {
 	platform = "win";
 }
 //adding browser, for use case when module is bundled using browserify. and added to html using src.
@@ -15,8 +15,8 @@ if (platform !== 'linux' && platform !== 'mac' && platform !== 'win' && platform
 }
 
 var arch = os.arch()
-if (platform === 'mac' && arch !== 'x64') {
-  console.error('Unsupported architecture.')
+if (platform === 'mac' && (arch !== 'x64' &&  arch !== 'arm64' )) {
+  console.error('ffmpeg-static-electron: Unsupported architecture ' + platform + ' ' + arch + '.');
   process.exit(1)
 }
 
