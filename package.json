@@ -1,6 +1,6 @@
 {
   "name": "ffmpeg-static-electron",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "ffmpeg static binaries for Mac OSX and Linux and Windows",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pietrop/ffmpeg-static-electron"
+    "url": "https://github.com/Live4-TV/ffmpeg-static-electron"
   },
   "keywords": [
     "ffmpeg",
